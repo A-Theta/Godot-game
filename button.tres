@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://bt7sbnq5gxjlx"]
+
+[ext_resource type="FontFile" uid="uid://dxqw8evaays48" path="res://Assets/Silver.ttf" id="1_updu2"]
+
+[resource]
+default_font = ExtResource("1_updu2")
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("1_updu2")

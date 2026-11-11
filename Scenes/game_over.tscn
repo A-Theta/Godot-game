@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b57cfof7kgc36"]
+
+[ext_resource type="FontFile" uid="uid://dxqw8evaays48" path="res://Assets/Silver.ttf" id="1_8fo1c"]
+[ext_resource type="Theme" uid="uid://bt7sbnq5gxjlx" path="res://button.tres" id="2_ek8ke"]
+[ext_resource type="Script" uid="uid://wxhyje1lh4d2" path="res://Scripts/game_over.gd" id="3_ek8ke"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_64hsu"]
+font = ExtResource("1_8fo1c")
+font_size = 40
+
+[node name="GAME-OVER" type="Node2D" unique_id=2087541629]
+script = ExtResource("3_ek8ke")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1583929517]
+offset_left = -257.0
+offset_top = -124.0
+offset_right = 259.0
+offset_bottom = 128.0
+color = Color(0.75686276, 0.101960786, 0.2627451, 0.20392157)
+
+[node name="Label" type="Label" parent="." unique_id=491879307]
+texture_filter = 1
+offset_left = -56.0
+offset_top = -93.0
+offset_right = 56.0
+offset_bottom = -48.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_64hsu")
+
+[node name="Main-Menu" type="Button" parent="." unique_id=86945150]
+texture_filter = 1
+offset_left = -67.0
+offset_top = -19.0
+offset_right = 67.0
+offset_bottom = 12.0
+theme = ExtResource("2_ek8ke")
+text = "Main Menu"
+
+[node name="Restart" type="Button" parent="." unique_id=1416966559]
+texture_filter = 1
+offset_left = -66.0
+offset_top = 21.0
+offset_right = 69.0
+offset_bottom = 52.0
+theme = ExtResource("2_ek8ke")
+text = "Restart"
+
+[connection signal="pressed" from="Main-Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
